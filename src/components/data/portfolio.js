@@ -1,5 +1,26 @@
 export default [
     {
+        title: 'aaronnader.com (this website)',
+        imgUrl: 'assets/portfolio.png',
+        stack: ['React JS', 'Vite JS', 'JSX'],
+        link: 'http://www.aaronnader.com/',
+    },
+    
+    {
+        title: 'Login System',
+        imgUrl: 'assets/login.png',
+        stack: ['JavaScript', 'Node JS', 'EJS'],
+        link: 'https://github.com/AaronNader96/Login-System-Node-JS-Express-EJS',
+    },
+
+    {
+        title: 'Zombie Command Line Game',
+        imgUrl: 'assets/zombie.png',
+        stack: ['Python'],
+        link: 'https://github.com/AaronNader96/Zombie-Command-Line-script',
+    },
+
+    {
         title: 'Tic Tac Toe',
         imgUrl: 'assets/ticTac.jpg',
         stack: ['HTML', 'CSS', 'JavaScript'],
@@ -10,7 +31,7 @@ export default [
         title: 'DayZ GTA SA-MP',
         imgUrl: 'assets/dayzPhoto.jpg',
         stack: ['PAWN', 'C++', 'MySQL'],
-        link: 'https://www.youtube.com/@KittenSAMP/videos',
+        link: 'https://github.com/AaronNader96/Project-DayZ-SAMP',
     },
 
     {
