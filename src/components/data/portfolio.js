@@ -2,7 +2,7 @@ export default [
     {
         title: 'aaronnader.com (this website)',
         imgUrl: 'assets/portfolio.png',
-        stack: ['React JS', 'Vite JS', 'JSX'],
+        stack: ['React JS', 'Vite JS', 'Tailwind CSS'],
         link: 'http://www.aaronnader.com/',
     },
     
