@@ -28,6 +28,14 @@ function Home() {
     return () => clearInterval(intervalId);
   }, []);*/
 
+  function handleDownloadResume() {
+    const fileUrl = "/assets/resume.pdf"; // Replace with the actual file URL
+    const anchor = document.createElement("a");
+    anchor.href = fileUrl;
+    anchor.download = "resume.pdf"; // Specify the desired file name
+    anchor.click();
+  }
+
   return (
     <div className="flex items-center justify-center flex-col text-center pt-8 pb-6">
       <h1 className="text-4xl md:text-7xl dark:text-white mb-1 md:mb-3 font-bold">
@@ -35,6 +43,14 @@ function Home() {
       </h1>
 
       <p className="text-base md:text-xl mb-7 font-medium">Software Engineer</p>
+
+      <button
+        type="button"
+        onClick={handleDownloadResume}
+        className="px-4 py-2 rounded-md bg-gray-500 border border-black dark:border-white text-black dark:text-white hover:bg-orange-600 transition-colors duration-300 mb-4"
+      >
+        <span>Download Resume</span>
+      </button>
 
       <p className="text-sm max-w-xl mb-3 font-bold">
         Hey there, I'm Aaron Nader, a 27-year-old web developer with a passion
