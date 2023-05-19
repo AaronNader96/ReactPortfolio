@@ -16,6 +16,14 @@ function NavBar() {
           </li>
           <li className="mr-3">
             <Link
+              to="/Timeline"
+              className="text-black dark:text-white border border-black dark:border-white rounded h-15 w-20 flex items-center justify-center hover:bg-orange-500 hover:text-black dark:hover:text-white transition duration-300"
+            >
+              Career
+            </Link>
+          </li>
+          <li className="mr-3">
+            <Link
               to="/portfolio"
               className="text-black dark:text-white border border-black dark:border-white rounded h-15 w-20 flex items-center justify-center hover:bg-orange-500 hover:text-black dark:hover:text-white transition duration-300"
             >
