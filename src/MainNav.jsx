@@ -5,6 +5,7 @@ import Contact from "./components/Contact";
 import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import Timeline from "./components/Timeline";
+import Stats from "./components/Stats";
 
 function MainNav() {
   return (
@@ -15,6 +16,7 @@ function MainNav() {
           <Route path="/" element={<Home />} />
           <Route path="/Timeline" element={<Timeline />} />
           <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="stats" element={<Stats />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
