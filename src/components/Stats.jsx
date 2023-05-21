@@ -114,7 +114,8 @@ const Stats = () => {
         </div>
         <div className="rounded-lg border border-black dark:border-white hover:bg-orange-500 hover:text-black dark:hover:text-white transition duration-300 p-4">
           <p className="text-center md:text-left">
-            Lines of Code: {linesOfCode !== null ? linesOfCode : "Loading..."}
+            Lines of Code That is Powering this Website:{" "}
+            {linesOfCode !== null ? linesOfCode : "Loading..."}
           </p>
         </div>
 
