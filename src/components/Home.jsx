@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 function Home() {
   function handleDownloadResume() {
-    const fileUrl = "/assets/resume.pdf"; // Replace with the actual file URL
+    const fileUrl = "/assets/resume.pdf";
     const anchor = document.createElement("a");
     anchor.href = fileUrl;
-    anchor.download = "resume.pdf"; // Specify the desired file name
+    anchor.download = "resume.pdf";
     anchor.click();
   }
 

@@ -7,6 +7,38 @@ const Stats = () => {
   const [repoCount, setRepoCount] = useState(null);
   const currentCity = "West Jordan, UT";
 
+  const [linesOfCode, setLinesOfCode] = useState(null);
+  const [commitsCount, setCommitsCount] = useState(null);
+
+  useEffect(() => {
+    // Fetch lines of code and commits count from the GitHub REST API
+    axios
+      .get(
+        "https://api.github.com/repos/AaronNader96/ReactPortfolio/stats/code_frequency"
+      )
+      .then((response) => {
+        const codeFrequency = response.data;
+        const linesAdded = codeFrequency.reduce(
+          (total, [_, additions]) => total + additions,
+          0
+        );
+        setLinesOfCode(linesAdded);
+      })
+      .catch((error) => {
+        console.error("Error fetching lines of code:", error);
+      });
+
+    axios
+      .get("https://api.github.com/repos/AaronNader96/ReactPortfolio/commits")
+      .then((response) => {
+        const commits = response.data;
+        setCommitsCount(commits.length);
+      })
+      .catch((error) => {
+        console.error("Error fetching commits count:", error);
+      });
+  }, []);
+
   useEffect(() => {
     const interval = setInterval(() => {
       const currentDate = moment();
@@ -51,26 +83,41 @@ const Stats = () => {
   }, []);
 
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4 text-center">
+    <div className="container mx-auto p-4 mb-4">
+      <h1 className="text-4xl md:text-7xl dark:text-white mb-4 md:mb-6 font-bold text-left">
         Website & Personal Statistics
       </h1>
-      <div className="flex flex-col items-center gap-4">
-        <div className="rounded border dark:border-white hover:bg-orange-500 hover:text-black dark:hover:text-white transition duration-300">
-          <p className="text-center p-4">Current City: {currentCity}</p>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="rounded-lg border border-black dark:border-white hover:bg-orange-500 hover:text-black dark:hover:text-white transition duration-300 p-4">
+          <p className="text-center md:text-left">
+            Current City: {currentCity}
+          </p>
         </div>
-        <div className="rounded border dark:border-white hover:bg-orange-500 hover:text-black dark:hover:text-white transition duration-300">
-          <p className="text-center p-4">Age: {age ? age : "Loading..."}</p>
+        <div className="rounded-lg border border-black dark:border-white hover:bg-orange-500 hover:text-black dark:hover:text-white transition duration-300 p-4">
+          <p className="text-center md:text-left">
+            Age: {age ? age : "Loading..."}
+          </p>
         </div>
-        <div className="rounded border dark:border-white hover:bg-orange-500 hover:text-black dark:hover:text-white transition duration-300">
-          <p className="text-center p-4">
+        <div className="rounded-lg border border-black dark:border-white hover:bg-orange-500 hover:text-black dark:hover:text-white transition duration-300 p-4">
+          <p className="text-center md:text-left">
             Website created: {counter ? `${counter.days} days` : "Loading..."},
             {counter ? ` ${counter.seconds} seconds` : ""}
           </p>
         </div>
-        <div className="rounded border dark:border-white hover:bg-orange-500 hover:text-black dark:hover:text-white transition duration-300">
-          <p className="text-center p-4">
+        <div className="rounded-lg border border-black dark:border-white hover:bg-orange-500 hover:text-black dark:hover:text-white transition duration-300 p-4">
+          <p className="text-center md:text-left">
             GitHub Repository Count: {repoCount || "Loading..."}
+          </p>
+        </div>
+        <div className="rounded-lg border border-black dark:border-white hover:bg-orange-500 hover:text-black dark:hover:text-white transition duration-300 p-4">
+          <p className="text-center md:text-left">
+            Lines of Code: {linesOfCode !== null ? linesOfCode : "Loading..."}
+          </p>
+        </div>
+
+        <div className="rounded-lg border border-black dark:border-white hover:bg-orange-500 hover:text-black dark:hover:text-white transition duration-300 p-4">
+          <p className="text-center md:text-left">
+            Commits Count: {commitsCount !== null ? commitsCount : "Loading..."}
           </p>
         </div>
       </div>

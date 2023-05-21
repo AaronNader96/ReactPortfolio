@@ -41,7 +41,7 @@ function Contact() {
           ></textarea>
 
           <button
-            type="button"
+            type="submit"
             className="text-center inline-block
                     px-8 py-3 w-max text-base font-medium rounded-md tex t-white bg-gradient-to-r from-blue-500 to-gray-500 drop-shadow-md hover:stroke-white"
           >

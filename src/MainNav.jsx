@@ -6,6 +6,7 @@ import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import Timeline from "./components/Timeline";
 import Stats from "./components/Stats";
+import Offers from "./components/Offers";
 
 function MainNav() {
   return (
@@ -15,6 +16,7 @@ function MainNav() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Timeline" element={<Timeline />} />
+          <Route path="/Offers" element={<Offers />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="stats" element={<Stats />} />
           <Route path="/contact" element={<Contact />} />
