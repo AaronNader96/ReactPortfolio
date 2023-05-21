@@ -64,12 +64,28 @@ function App() {
       <button
         type="button"
         onClick={handleThemeSwitch}
-        className="fixed p-2 z-10 left-4 md:left-20 top-16 md:top-4 bg-violet-300 dark:bg-orange-300 text-lg p-1 rounded-md flex items-center space-x-2 text-white dark:text-black"
+        className="fixed p-1 z-10 left-2 md:left-auto right-2 md:right-4 bottom-2 md:bottom-4 bg-violet-300 dark:bg-orange-300 text-sm rounded-full flex items-center space-x-1 text-white dark:text-black"
         style={{
-          "@media (max-width: 375px) and (max-height: 812px)": {
+          "@media (max-width: 375px)": {
             left: "auto",
             right: "4px",
-            top: "calc(env(safe-area-inset-top) + 96px)",
+            bottom: "calc(env(safe-area-inset-bottom) + 56px)",
+            padding: "2px",
+            fontSize: "12px",
+          },
+          "@media (max-width: 414px)": {
+            left: "auto",
+            right: "4px",
+            bottom: "calc(env(safe-area-inset-bottom) + 56px)",
+            padding: "2px",
+            fontSize: "12px",
+          },
+          "@media (max-width: 1440px)": {
+            left: "auto",
+            right: "4px",
+            bottom: "calc(env(safe-area-inset-bottom) + 56px)",
+            padding: "2px",
+            fontSize: "12px",
           },
         }}
       >

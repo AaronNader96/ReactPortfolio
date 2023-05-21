@@ -87,6 +87,9 @@ const Stats = () => {
       <h1 className="text-4xl md:text-7xl dark:text-white mb-4 md:mb-6 font-bold text-left">
         Website & Personal Statistics
       </h1>
+      <p className="text-center text-gray-500 mb-2">
+        Real-time data powered by React
+      </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="rounded-lg border border-black dark:border-white hover:bg-orange-500 hover:text-black dark:hover:text-white transition duration-300 p-4">
           <p className="text-center md:text-left">
