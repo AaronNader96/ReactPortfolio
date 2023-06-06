@@ -15,9 +15,12 @@ function Home() {
       <h1 className="text-4xl md:text-7xl dark:text-white mb-1 md:mb-3 font-bold">
         Aaron Nader
       </h1>
-
-      <p className="text-base md:text-xl mb-7 font-medium">Software Engineer</p>
-
+      <p className="text-base md:text-xl mb-5 font-medium">Software Engineer</p>
+      <img
+        src="https://media.licdn.com/dms/image/C5603AQH68ZJZbfRv8g/profile-displayphoto-shrink_800_800/0/1660590497944?e=1690416000&v=beta&t=wm6Ciyt0k_dn2h6qQK2Xv-x0jifF_Hngi152JaLgI4c"
+        alt="Profile"
+        className="rounded-full w-32 h-32 border-2 border-black dark:border-white mb-3"
+      />
       <button
         type="button"
         onClick={handleDownloadResume}

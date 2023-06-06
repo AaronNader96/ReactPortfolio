@@ -2,7 +2,7 @@ export default [
   {
     year: "Today",
     title: "Internal Performance Systems",
-    duration: "3 Months",
+    duration: "Present",
     details:
       "Full-Stack Developer for Discover Financial Services building APIs, using MSSQL for back end developing and supporting internal teams with data reports and management. ",
   },
