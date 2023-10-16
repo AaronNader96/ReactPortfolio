@@ -5,7 +5,7 @@ import moment from "moment";
 const Stats = () => {
   const [counter, setCounter] = useState(null);
   const [repoCount, setRepoCount] = useState(null);
-  const currentCity = "West Jordan, UT";
+  const currentCity = "Herriman, UT";
 
   const [linesOfCode, setLinesOfCode] = useState(null);
   const [commitsCount, setCommitsCount] = useState(null);
@@ -85,7 +85,7 @@ const Stats = () => {
   return (
     <div className="container mx-auto p-4 mb-4">
       <h1 className="text-4xl md:text-7xl dark:text-white mb-4 md:mb-6 font-bold text-left">
-        Website & Personal Statistics
+        Some cool statistics about my website :)
       </h1>
       <p className="text-center text-gray-500 mb-2">
         Real-time data powered by React

@@ -17,7 +17,7 @@ function Home() {
       </h1>
       <p className="text-base md:text-xl mb-5 font-medium">Software Engineer</p>
       <img
-        src="https://media.licdn.com/dms/image/C5603AQH68ZJZbfRv8g/profile-displayphoto-shrink_800_800/0/1660590497944?e=1690416000&v=beta&t=wm6Ciyt0k_dn2h6qQK2Xv-x0jifF_Hngi152JaLgI4c"
+        src="https://media.licdn.com/dms/image/D5603AQH9oA1pTLPYwA/profile-displayphoto-shrink_800_800/0/1694052389901?e=1703116800&v=beta&t=xbzStMDKcq3VFUljKAnLRBsx1MXq-cj15a3v0LMvXRQ"
         alt="Profile"
         className="rounded-full w-32 h-32 border-2 border-black dark:border-white mb-3"
       />
@@ -30,42 +30,42 @@ function Home() {
       </button>
 
       <p className="max-w-xl mb-6 font-bold leading-relaxed text-gray-700 dark:text-white">
-        Hey there, I'm Aaron Nader, a{" "}
-        <span className="text-orange-500">web developer</span> specializing in{" "}
-        <span className="text-orange-500">React</span>,{" "}
-        <span className="text-orange-500">TypeScript</span>,{" "}
+        Greetings! I'm Aaron Nader, an enthusiastic software engineer with a
+        deep passion for web development and cutting-edge technologies. My
+        expertise revolves around creating exceptional websites and web
+        applications using a diverse set of tools and frameworks. I specialize
+        in <span className="text-orange-500">React</span>,{" "}
         <span className="text-orange-500">MSSQL</span>, and{" "}
-        <span className="text-orange-500">JavaScript</span>. I have a strong
-        passion for crafting exceptional websites and web applications. With
-        React, I build dynamic and interactive user interfaces, providing
-        seamless user experiences. TypeScript helps me write scalable and
-        maintainable code, ensuring robustness and minimizing errors. MSSQL
-        enables efficient data storage and management, ensuring reliable
-        database operations. I also have experience with JavaScript and CSS
-        frameworks like <span className="text-orange-500">Bootstrap</span>,{" "}
-        <span className="text-orange-500">Tailwind CSS</span>, and{" "}
-        <span className="text-orange-500">Chakra UI</span>, allowing me to
-        create visually appealing and responsive designs.
+        <span className="text-orange-500">JavaScript</span>. With React, I craft
+        dynamic and interactive user interfaces, delivering seamless and
+        engaging user experiences. My strong proficiency in TypeScript ensures
+        scalable and maintainable code, while CSS frameworks like{" "}
+        <span className="text-orange-500">Tailwind CSS</span> and{" "}
+        <span className="text-orange-500">Chakra UI</span> enable me to create
+        visually appealing and responsive designs. MSSQL is instrumental in my
+        work, facilitating efficient data storage and management for reliable
+        database operations. I'm dedicated to delivering top-tier web solutions
+        while staying abreast of the latest industry trends, making me an ideal
+        partner for your next web development project.
       </p>
+
       <p className="max-w-xl mb-6 leading-relaxed text-gray-700 dark:text-white">
-        When I'm not coding, I enjoy staying active and maintaining a healthy
-        lifestyle. Whether it's hitting the gym or exploring nature through
-        hikes, I believe in taking care of my physical and mental well-being. My
-        family, especially my supportive wife Caroline, has played a crucial
-        role in my professional journey, helping me achieve my goals.
-      </p>
-      <p className="max-w-xl mb-6 leading-relaxed text-gray-700 dark:text-white">
-        I'm excited to share my portfolio, where I showcase projects developed
-        using cutting-edge technologies like{" "}
+        Beyond coding, I thrive in an active and healthy lifestyle. Whether it's
+        hitting the gym or exploring nature through hikes, I prioritize
+        maintaining my physical and mental well-being. My family, particularly
+        my supportive wife, Caroline, has been an integral part of my
+        professional journey, propelling me towards achieving my goals. I'm
+        excited to share my portfolio, which showcases projects developed using
+        cutting-edge technologies like{" "}
         <span className="text-orange-500">Vite</span>,{" "}
         <span className="text-orange-500">React</span>, and{" "}
-        <span className="text-orange-500">Tailwind CSS</span>. I'm open to
+        <span className="text-orange-500">Tailwind CSS</span>. I welcome
         feedback and advice on the design and functionality of my portfolio.
-        Click on{" "}
+        Feel free to get in touch by clicking on the{" "}
         <Link to="/contact" className="text-orange-500">
           Contact
         </Link>{" "}
-        and let's connect and explore opportunities to work together!
+        link, and let's explore opportunities to collaborate!
       </p>
     </div>
   );

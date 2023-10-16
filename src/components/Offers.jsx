@@ -10,9 +10,9 @@ const Offers = () => {
 
       <p className="max-w-xl mb-6 font-bold leading-relaxed text-gray-700 dark:text-white">
         As a first-time client, you are eligible for free services to build your
-        portfolio or create a simple website. (This is a limited time deal) I
-        specialize in React, HTML, CSS, PHP, JavaScript, and SQL. Let's
-        collaborate and bring your ideas to life!
+        portfolio or create a simple website. I specialize in React, HTML, CSS,
+        PHP, JavaScript, and SQL. Let's collaborate and bring your ideas to
+        life!
       </p>
       <p className="max-w-xl mb-6 leading-relaxed text-gray-700 dark:text-white">
         React is a popular JavaScript library for building user interfaces. It
