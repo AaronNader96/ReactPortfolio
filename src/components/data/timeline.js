@@ -1,22 +1,27 @@
 export default [
   {
     year: "Today",
-    title: "Software Engineer - Full Stack",
+    title: "Software Engineer",
     duration: "Present",
-    details:
-      "I'm an experienced software engineer at Discover Financial Services, with a strong command of a diverse set of front-end and back-end technologies, including JavaScript, Microsoft SQL Server (MSSQL), React, Material-UI, Chakra UI, and cloud databasing solutions (AWS, Azure, Google Cloud). My proficiency extends to orchestrating deployment pipelines with Jenkins, as well as utilizing a spectrum of front-end tools and libraries. In my role, I specialize in designing and developing scalable applications and user-friendly interfaces. I have a track record of actively engaging with the team through Jira to efficiently handle department ticket responses, addressing bugs, and swiftly managing work requests. My commitment to championing innovation and adhering to industry best practices ensures that projects are executed with the highest standards of quality and performance.",
+    details: `
+      As an experienced Software Engineer at Discover, I possess a strong command of a diverse set of front-end and back-end technologies, including JavaScript, Microsoft SQL Server (MSSQL), React, Material-UI, Chakra UI, and cloud databasing solutions (AWS, Azure, Google Cloud). Proficient in orchestrating deployment pipelines with Jenkins and implementing CI/CD best practices, I ensure efficient and reliable application delivery.
+      My skill set extends to leveraging various front-end tools and libraries, contributing to the development of scalable applications and user-friendly interfaces. Actively engaging with the team through Jira, I efficiently manage department ticket responses, address bugs, and handle work requests. My commitment to championing innovation and adhering to industry best practices ensures that projects are executed with the highest standards of quality and performance.
+    `,
   },
 
   {
-    year: "April, 2023",
-    title: "Web Development Internship",
-    duration: "3 Months",
-    details:
-      "During my internship at Salt Lake Community College, I had the opportunity to work on web development projects, where I designed and built dynamic websites using HTML, PHP, MySQL, and JavaScript. I also honed my software engineering skills, utilizing version control tools like Git and collaborating with team members through GitHub to ensure efficient and organized development processes. This hands-on experience allowed me to apply technical expertise and gain a strong foundation in web development while fostering collaborative development practices.",
+    year: "January, 2023",
+    title: "Software Engineer Internship",
+    duration: "6 Months",
+    details: `
+      During my internship at Salt Lake Community College, I actively contributed to web development projects, implementing changes to enhance website success, functionality, and usability. I played a key role in deploying web capabilities to support data life cycle management.
+      My responsibilities included the development of dynamic web applications using SQL, PHP, HTML, CSS, jQuery, and JavaScript. I meticulously evaluated code to ensure compatibility with various browsers, devices, and operating systems.
+      Additionally, I collaborated with the team to establish design guidelines, standards, and best practices, actively participating in the web design department's growth and contributing to a collaborative development environment. This hands-on experience allowed me to apply my technical expertise and gain a strong foundation in web development while fostering efficient and organized development processes.
+    `,
   },
 
   {
-    year: "April, 2023",
+    year: "December, 2022",
     title: "Web Development Certification",
     duration: "6 months",
     details:

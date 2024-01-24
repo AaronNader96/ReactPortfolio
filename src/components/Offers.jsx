@@ -9,10 +9,8 @@ const Offers = () => {
       </h1>
 
       <p className="max-w-xl mb-6 font-bold leading-relaxed text-gray-700 dark:text-white">
-        As a first-time client, you are eligible for free services to build your
-        portfolio or create a simple website. I specialize in React, HTML, CSS,
-        PHP, JavaScript, and SQL. Let's collaborate and bring your ideas to
-        life!
+        I specialize in React, JavaScript, CSS, PHP, JavaScript, and SQL. Let's
+        collaborate and bring your ideas to life!
       </p>
       <p className="max-w-xl mb-6 leading-relaxed text-gray-700 dark:text-white">
         React is a popular JavaScript library for building user interfaces. It
@@ -31,7 +29,7 @@ const Offers = () => {
               Portfolio Website
             </h3>
             <p className="text-gray-700 dark:text-white mb-4">
-              Starting at $40
+              Starting at $60
             </p>
             <p className="text-gray-700 dark:text-white">
               Showcase your work and create an online presence with a
@@ -43,7 +41,7 @@ const Offers = () => {
               Blog Website
             </h3>
             <p className="text-gray-700 dark:text-white mb-4">
-              Starting at $60
+              Starting at $80
             </p>
             <p className="text-gray-700 dark:text-white">
               Share your thoughts, ideas, and stories with a professionally
@@ -55,7 +53,7 @@ const Offers = () => {
               E-commerce Website
             </h3>
             <p className="text-gray-700 dark:text-white mb-4">
-              Starting at $80
+              Starting at $120
             </p>
             <p className="text-gray-700 dark:text-white">
               Set up an online store and start selling your products with a

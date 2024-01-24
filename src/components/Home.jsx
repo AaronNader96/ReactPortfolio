@@ -6,7 +6,7 @@ function Home() {
     const fileUrl = "/assets/resume.pdf";
     const anchor = document.createElement("a");
     anchor.href = fileUrl;
-    anchor.download = "resume.pdf";
+    anchor.download = "AaronNader2024.pdf";
     anchor.click();
   }
 
@@ -17,55 +17,42 @@ function Home() {
       </h1>
       <p className="text-base md:text-xl mb-5 font-medium">Software Engineer</p>
       <img
-        src="https://media.licdn.com/dms/image/D5603AQH9oA1pTLPYwA/profile-displayphoto-shrink_800_800/0/1694052389901?e=1703116800&v=beta&t=xbzStMDKcq3VFUljKAnLRBsx1MXq-cj15a3v0LMvXRQ"
+        src="/dist/assets/aaron.jpg"
         alt="Profile"
         className="rounded-full w-32 h-32 border-2 border-black dark:border-white mb-3"
       />
       <button
         type="button"
         onClick={handleDownloadResume}
-        className="px-4 py-2 rounded-md bg-gray-500 border border-black dark:border-white text-black dark:text-white hover:bg-orange-600 transition-colors duration-300 mb-4"
+        className="px-4 py-2 rounded-md bg-gray-500 border border-black dark:border-white text-black dark:text-white hover:bg-gray-700 transition-colors duration-300 mb-4"
       >
         <span>Download Resume</span>
       </button>
 
       <p className="max-w-xl mb-6 font-bold leading-relaxed text-gray-700 dark:text-white">
-        Greetings! I'm Aaron Nader, an enthusiastic software engineer with a
-        deep passion for web development and cutting-edge technologies. My
-        expertise revolves around creating exceptional websites and web
-        applications using a diverse set of tools and frameworks. I specialize
-        in <span className="text-orange-500">React</span>,{" "}
-        <span className="text-orange-500">MSSQL</span>, and{" "}
-        <span className="text-orange-500">JavaScript</span>. With React, I craft
-        dynamic and interactive user interfaces, delivering seamless and
-        engaging user experiences. My strong proficiency in TypeScript ensures
-        scalable and maintainable code, while CSS frameworks like{" "}
-        <span className="text-orange-500">Tailwind CSS</span> and{" "}
-        <span className="text-orange-500">Chakra UI</span> enable me to create
-        visually appealing and responsive designs. MSSQL is instrumental in my
-        work, facilitating efficient data storage and management for reliable
-        database operations. I'm dedicated to delivering top-tier web solutions
-        while staying abreast of the latest industry trends, making me an ideal
-        partner for your next web development project.
+        Hi, I'm Aaron Nader, a Software Engineer skilled in both front-end and
+        back-end development. I specialize in crafting dynamic and interactive
+        user interfaces using React and ensuring seamless user experiences. On
+        the back end, I have expertise in Node.js and Python, utilizing MSSQL
+        for efficient database management.
       </p>
 
       <p className="max-w-xl mb-6 leading-relaxed text-gray-700 dark:text-white">
-        Beyond coding, I thrive in an active and healthy lifestyle. Whether it's
-        hitting the gym or exploring nature through hikes, I prioritize
-        maintaining my physical and mental well-being. My family, particularly
-        my supportive wife, Caroline, has been an integral part of my
-        professional journey, propelling me towards achieving my goals. I'm
-        excited to share my portfolio, which showcases projects developed using
-        cutting-edge technologies like{" "}
-        <span className="text-orange-500">Vite</span>,{" "}
-        <span className="text-orange-500">React</span>, and{" "}
-        <span className="text-orange-500">Tailwind CSS</span>. I welcome
-        feedback and advice on the design and functionality of my portfolio.
-        Feel free to get in touch by clicking on the{" "}
-        <Link to="/contact" className="text-orange-500">
+        My diverse skill set includes front-end technologies like JavaScript,
+        Tailwind CSS, and Chakra UI. I'm dedicated to full-stack development,
+        with a focus on delivering robust solutions. Let's connect and explore
+        how my expertise can contribute to your projects!
+      </p>
+
+      <p className="max-w-xl mb-6 leading-relaxed text-gray-700 dark:text-white">
+        Beyond coding, I maintain an active lifestyle, balancing my love for
+        technology with a commitment to physical and mental well-being. Check
+        out my portfolio for projects developed using cutting-edge technologies.
+        I'm open to feedback. Feel free to get in touch via the{" "}
+        <Link to="/contact" className="text-white">
           Contact
         </Link>{" "}
-        link, and let's explore opportunities to collaborate!
+        link. Let's explore opportunities to collaborate!
       </p>
     </div>
   );
