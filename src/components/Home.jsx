@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Home() {
   function handleDownloadResume() {
-    const fileUrl = "/assets/resume.pdf";
+    const fileUrl = "/assets/AaronNader2024.pdf";
     const anchor = document.createElement("a");
     anchor.href = fileUrl;
     anchor.download = "AaronNader2024.pdf";
@@ -17,14 +17,14 @@ function Home() {
       </h1>
       <p className="text-base md:text-xl mb-5 font-medium">Software Engineer</p>
       <img
-        src="/dist/assets/aaron.jpg"
+        src="/assets/aaron.jpg"
         alt="Profile"
         className="rounded-full w-32 h-32 border-2 border-black dark:border-white mb-3"
       />
       <button
         type="button"
         onClick={handleDownloadResume}
-        className="px-4 py-2 rounded-md bg-gray-500 border border-black dark:border-white text-black dark:text-white hover:bg-gray-700 transition-colors duration-300 mb-4"
+        className="px-4 py-2 rounded-md bg-gray-500 border border-black dark:border-white text-black dark:text-white hover:bg-orange-500 transition-colors duration-600 mb-4"
       >
         <span>Download Resume</span>
       </button>
@@ -38,10 +38,10 @@ function Home() {
       </p>
 
       <p className="max-w-xl mb-6 leading-relaxed text-gray-700 dark:text-white">
-        My diverse skill set includes front-end technologies like JavaScript,
-        Tailwind CSS, and Chakra UI. I'm dedicated to full-stack development,
-        with a focus on delivering robust solutions. Let's connect and explore
-        how my expertise can contribute to your projects!
+        My diverse skill set includes front-end technologies like React
+        JavaScript, Tailwind CSS, and Chakra UI. I'm dedicated to full-stack
+        development, with a focus on delivering robust solutions. Let's connect
+        and explore how my expertise can contribute to your projects!
       </p>
 
       <p className="max-w-xl mb-6 leading-relaxed text-gray-700 dark:text-white">
@@ -49,10 +49,10 @@ function Home() {
         technology with a commitment to physical and mental well-being. Check
         out my portfolio for projects developed using cutting-edge technologies.
         I'm open to feedback. Feel free to get in touch via the{" "}
-        <Link to="/contact" className="text-white">
+        <Link to="/contact" className="text-black dark:text-white">
           Contact
         </Link>{" "}
-        link. Let's explore opportunities to collaborate!
+        link.
       </p>
     </div>
   );

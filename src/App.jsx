@@ -3,7 +3,7 @@ import Footer from "./components/footer";
 import MainNav from "./MainNav";
 
 function App() {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("light");
 
   /*useEffect(() => {
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {

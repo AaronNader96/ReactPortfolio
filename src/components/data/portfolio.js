@@ -3,14 +3,14 @@ export default [
     title: "React To Do List",
     imgUrl: "assets/ToDo.png",
     stack: ["React", "CSS", "JavaScript"],
-    link: "https://github.com/AaronNader96/React-ToDo-List",
+    link: "https://todolist.aaronnader.com/",
   },
 
   {
     title: "FitMate - Fitness App",
     imgUrl: "assets/FitMate.png",
     stack: ["React", "Chakra UI", "JavaScript"],
-    link: "https://github.com/AaronNader96/fitness-tracker",
+    link: "https://fitness.aaronnader.com/",
   },
 
   {
@@ -60,5 +60,11 @@ export default [
     imgUrl: "assets/aiCooking.jpg",
     stack: ["JavaScript", "HTML"],
     link: "https://github.com/AaronNader96/AI-Basic-Cooking-Game-JS",
+  },
+  {
+    title: "Miller Campus Cafeteria - Intership Project",
+    imgUrl: "assets/miller.png",
+    stack: ["JavaScript", "HTML", "PHP"],
+    link: "https://www.aaronnader.slccwebdev.com/internship/cafe/index.php",
   },
 ];

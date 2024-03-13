@@ -9,6 +9,8 @@ const Stats = () => {
 
   const [linesOfCode, setLinesOfCode] = useState(null);
   const [commitsCount, setCommitsCount] = useState(null);
+  const [contributorsCount, setContributorsCount] = useState(null);
+  const [languagesUsed, setLanguagesUsed] = useState(null);
 
   useEffect(() => {
     // Fetch lines of code and commits count from the GitHub REST API
@@ -36,6 +38,28 @@ const Stats = () => {
       })
       .catch((error) => {
         console.error("Error fetching commits count:", error);
+      });
+
+    axios
+      .get(
+        "https://api.github.com/repos/AaronNader96/ReactPortfolio/contributors"
+      )
+      .then((response) => {
+        const contributors = response.data;
+        setContributorsCount(contributors.length);
+      })
+      .catch((error) => {
+        console.error("Error fetching contributors count:", error);
+      });
+
+    axios
+      .get("https://api.github.com/repos/AaronNader96/ReactPortfolio/languages")
+      .then((response) => {
+        const languages = response.data;
+        setLanguagesUsed(Object.keys(languages));
+      })
+      .catch((error) => {
+        console.error("Error fetching languages used:", error);
       });
   }, []);
 
@@ -82,13 +106,27 @@ const Stats = () => {
     };
   }, []);
 
+  const formatNumber = (number) => {
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  };
+
   return (
     <div className="container mx-auto p-4 mb-4">
       <h1 className="text-4xl md:text-7xl dark:text-white mb-4 md:mb-6 font-bold text-left">
         Some cool statistics about my website :)
       </h1>
       <p className="text-center text-gray-500 mb-2">
-        Real-time data powered by React
+        Real-time data powered by React & GitHub API calls. You can view the
+        source code{" "}
+        <a
+          href="https://github.com/AaronNader96/ReactPortfolio/blob/master/src/components/Stats.jsx"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-black"
+        >
+          here
+        </a>
+        .
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="rounded-lg border border-black dark:border-white hover:bg-orange-500 hover:text-black dark:hover:text-white transition duration-300 p-4">
@@ -103,25 +141,42 @@ const Stats = () => {
         </div>
         <div className="rounded-lg border border-black dark:border-white hover:bg-orange-500 hover:text-black dark:hover:text-white transition duration-300 p-4">
           <p className="text-center md:text-left">
-            Website created: {counter ? `${counter.days} days` : "Loading..."},
-            {counter ? ` ${counter.seconds} seconds` : ""}
+            Website created:{" "}
+            {counter
+              ? `${counter.days} days, ${counter.seconds} seconds`
+              : "Loading..."}
           </p>
         </div>
         <div className="rounded-lg border border-black dark:border-white hover:bg-orange-500 hover:text-black dark:hover:text-white transition duration-300 p-4">
           <p className="text-center md:text-left">
-            GitHub Repository Count: {repoCount || "Loading..."}
+            GitHub Repository Count:{" "}
+            {repoCount ? formatNumber(repoCount) : "Loading..."}
           </p>
         </div>
         <div className="rounded-lg border border-black dark:border-white hover:bg-orange-500 hover:text-black dark:hover:text-white transition duration-300 p-4">
           <p className="text-center md:text-left">
             Lines of Code That is Powering this Website:{" "}
-            {linesOfCode !== null ? linesOfCode : "Loading..."}
+            {linesOfCode !== null ? formatNumber(linesOfCode) : "Loading..."}
           </p>
         </div>
-
         <div className="rounded-lg border border-black dark:border-white hover:bg-orange-500 hover:text-black dark:hover:text-white transition duration-300 p-4">
           <p className="text-center md:text-left">
-            Commits Count: {commitsCount !== null ? commitsCount : "Loading..."}
+            Commits Count:{" "}
+            {commitsCount !== null ? formatNumber(commitsCount) : "Loading..."}
+          </p>
+        </div>
+        <div className="rounded-lg border border-black dark:border-white hover:bg-orange-500 hover:text-black dark:hover:text-white transition duration-300 p-4">
+          <p className="text-center md:text-left">
+            Contributors Count:{" "}
+            {contributorsCount !== null
+              ? formatNumber(contributorsCount)
+              : "Loading..."}
+          </p>
+        </div>
+        <div className="rounded-lg border border-black dark:border-white hover:bg-orange-500 hover:text-black dark:hover:text-white transition duration-300 p-4">
+          <p className="text-center md:text-left">
+            Languages Used:{" "}
+            {languagesUsed !== null ? languagesUsed.join(", ") : "Loading..."}
           </p>
         </div>
       </div>
