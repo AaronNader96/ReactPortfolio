@@ -1,11 +1,20 @@
 export default [
   {
-    year: "Today",
-    title: "Software Enginee - Discover",
-    duration: "Present",
+    year: "Feburary 2023 - Present",
+    title: "Software Engineer - Discover",
+    duration: "Over 1 year",
     details: `
-      As an experienced Software Engineer at Discover, I possess a strong command of a diverse set of front-end and back-end technologies, including JavaScript, Microsoft SQL Server (MSSQL), React, Material-UI, Chakra UI, and cloud databasing solutions (AWS, Azure, Google Cloud). Proficient in orchestrating deployment pipelines with Jenkins and implementing CI/CD best practices, I ensure efficient and reliable application delivery.
+      As an experienced Software Engineer at Discover, I possess a strong command of a diverse set of front-end and back-end technologies, including JavaScript, Microsoft SQL Server (MSSQL), React, Material-UI, Chakra UI, and cloud databasing solutions (AWS, Snowflake). Proficient in orchestrating deployment pipelines with Jenkins and implementing CI/CD best practices, I ensure efficient and reliable application delivery.
       My skill set extends to leveraging various front-end tools and libraries, contributing to the development of scalable applications and user-friendly interfaces. Actively engaging with the team through Jira, I efficiently manage department ticket responses, address bugs, and handle work requests. My commitment to championing innovation and adhering to industry best practices ensures that projects are executed with the highest standards of quality and performance.
+    `,
+  },
+
+  {
+    year: "May, 2023",
+    title: "Bachelor of Science - University of Utah",
+    duration: "two years",
+    details: `
+      Obtained my bachelor degree in computer science in May while working at Discover.
     `,
   },
 

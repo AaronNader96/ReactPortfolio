@@ -1,5 +1,17 @@
 export default [
   {
+    title: "Immaculate Heart Tech",
+    imgUrl: "assets/iht.png",
+    stack: ["React", "Chakra UI", "JavaScript"],
+    link: "https://immaculateheart.tech/",
+  },
+  {
+    title: "Be A Light Photography",
+    imgUrl: "assets/bealight.png",
+    stack: ["React JavaScript", "Chakra UI", "Vite"],
+    link: "https://bealightphotography.com/",
+  },
+  {
     title: "React To Do List",
     imgUrl: "assets/ToDo.png",
     stack: ["React", "CSS", "JavaScript"],

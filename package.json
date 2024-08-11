@@ -11,8 +11,10 @@
     "build:watch": "postcss src/styles/tailwind.css -o src/styles/main.css --watch"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.0",
+    "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.15.14",
+    "@mui/material": "^5.15.14",
     "axios": "^1.4.0",
     "classnames": "^2.3.2",
     "framer-motion": "^10.12.4",

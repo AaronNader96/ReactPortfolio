@@ -27,7 +27,7 @@ function NavBar() {
               to="/offers"
               className="text-black dark:text-white border border-black dark:border-white rounded h-15 px-4 flex items-center justify-center hover:bg-orange-500 hover:text-black dark:hover:text-white transition duration-300"
             >
-              Services
+              Services at IHT
             </Link>
           </li>
           <li>

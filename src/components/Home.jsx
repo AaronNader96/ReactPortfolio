@@ -38,21 +38,23 @@ function Home() {
       </p>
 
       <p className="max-w-xl mb-6 leading-relaxed text-gray-700 dark:text-white">
-        My diverse skill set includes front-end technologies like React
+        My diverse skill set includes front-end technologies like React,
         JavaScript, Tailwind CSS, and Chakra UI. I'm dedicated to full-stack
-        development, with a focus on delivering robust solutions. Let's connect
-        and explore how my expertise can contribute to your projects!
+        development, with a focus on delivering reliable solutions. Let's
+        connect and explore how my expertise can contribute to your projects!
       </p>
 
       <p className="max-w-xl mb-6 leading-relaxed text-gray-700 dark:text-white">
         Beyond coding, I maintain an active lifestyle, balancing my love for
-        technology with a commitment to physical and mental well-being. Check
-        out my portfolio for projects developed using cutting-edge technologies.
-        I'm open to feedback. Feel free to get in touch via the{" "}
+        technology with a commitment to physical and mental well-being. I've
+        also founded{" "}
+        <span className="text-purple-500">Immaculate Heart Tech</span>, where
+        we're dedicated to designing innovative web solutions and applications.
+        Reach out via the{" "}
         <Link to="/contact" className="text-black dark:text-white">
           Contact
         </Link>{" "}
-        link.
+        link to connect!
       </p>
     </div>
   );
