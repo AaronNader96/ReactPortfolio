@@ -5,14 +5,6 @@ import MainNav from "./MainNav";
 function App() {
   const [theme, setTheme] = useState("light");
 
-  /*useEffect(() => {
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      setTheme("dark");
-    } else {
-      setTheme("light");
-    }
-  }, []);*/
-
   const handleThemeSwitch = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
@@ -64,42 +56,12 @@ function App() {
       <button
         type="button"
         onClick={handleThemeSwitch}
-        className="fixed p-1 z-10 left-2 md:left-auto right-2 md:right-4 bottom-2 md:bottom-4 bg-violet-300 dark:bg-orange-300 text-sm rounded-full flex items-center space-x-1 text-white dark:text-black"
-        style={{
-          "@media (max-width: 375px)": {
-            left: "auto",
-            right: "4px",
-            bottom: "calc(env(safe-area-inset-bottom) + 56px)",
-            padding: "2px",
-            fontSize: "12px",
-          },
-          "@media (max-width: 414px)": {
-            left: "auto",
-            right: "4px",
-            bottom: "calc(env(safe-area-inset-bottom) + 56px)",
-            padding: "2px",
-            fontSize: "12px",
-          },
-          "@media (max-width: 1440px)": {
-            left: "auto",
-            right: "4px",
-            bottom: "calc(env(safe-area-inset-bottom) + 56px)",
-            padding: "2px",
-            fontSize: "12px",
-          },
-        }}
+        className="fixed p-2 z-10 right-2 bottom-4 bg-violet-300 dark:bg-orange-300 text-sm rounded-full flex items-center justify-center space-x-2 text-white dark:text-black transition-all duration-300"
       >
-        {theme === "dark" ? (
-          <>
-            <span>Light</span>
-            <span>{moon}</span>
-          </>
-        ) : (
-          <>
-            <span>Dark</span>
-            <span>{sun}</span>
-          </>
-        )}
+        <span className="hidden sm:block">
+          {theme === "dark" ? "Light" : "Dark"}
+        </span>
+        {theme === "dark" ? moon : sun}
       </button>
 
       <div className="bg-white dark:bg-stone-900 text-stone-900 dark:text-stone-300 min-h-screen font-inter">

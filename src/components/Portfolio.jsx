@@ -5,25 +5,23 @@ import { Link } from "react-router-dom";
 
 function Portfolio() {
   return (
-    <div className="flex items-center justify-center flex-col text-center pt-2 pb-6">
-      <div className="text-center">
-        <h1 className="text-4xl md:text-7xl dark:text-white mb-1 md:mb-3 font-bold">
+    <div className="flex flex-col items-center justify-center text-center py-6">
+      <header className="mb-6">
+        <h1 className="text-4xl md:text-7xl font-bold dark:text-white mb-3">
           Portfolio Showcase
         </h1>
         <Link
           to="https://github.com/AaronNader96"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          className="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
         >
           Visit GitHub
         </Link>
-      </div>
+      </header>
 
-      <br />
-
-      <div className="flex flex-col md:flex-row items-center justify-center">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="flex flex-col md:flex-row items-center justify-center w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {portfolio.map((project) => (
             <PortfolioItem
               key={project.id}
