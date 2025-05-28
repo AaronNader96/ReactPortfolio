@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Footer from "./components/footer";
+import Footer from "./components/Footer";
 import MainNav from "./MainNav";
 import { motion, AnimatePresence } from "framer-motion";
 
