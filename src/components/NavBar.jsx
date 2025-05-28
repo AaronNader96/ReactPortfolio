@@ -1,141 +1,126 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
 
 function NavBar() {
-  // State to toggle mobile menu
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 10;
+      setScrolled(isScrolled);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const navClasses = `fixed w-full top-0 z-50 transition-all duration-300 ${
+    scrolled
+      ? "bg-white/90 dark:bg-stone-900/90 backdrop-blur-md shadow-lg"
+      : "bg-white dark:bg-stone-900"
+  }`;
+
+  const linkClasses =
+    "relative text-gray-900 dark:text-white text-lg font-semibold px-4 py-2 rounded-md transition duration-300 hover:text-violet-600 dark:hover:text-violet-400";
+
+  const activeLinkClasses =
+    "after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-violet-600 dark:after:bg-violet-400";
 
   return (
-    <nav className="bg-white dark:bg-stone-900 shadow-lg">
-      {/* Container for the navbar */}
+    <nav className={navClasses}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Flexbox container for positioning */}
         <div className="relative flex items-center justify-between h-16">
-          {/* Logo Section */}
-          <div className="text-xl font-semibold text-gray-900 dark:text-white">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-xl font-semibold text-gray-900 dark:text-white"
+          >
             <Link to="/">Aaron Nader Portfolio</Link>
-          </div>
+          </motion.div>
 
-          {/* Desktop Menu: Hidden on mobile, shown on larger screens */}
           <div className="hidden sm:flex space-x-6">
-            <Link
-              to="/"
-              className="text-gray-900 dark:text-white text-lg font-semibold px-4 py-2 rounded-md transition duration-300 transform hover:bg-violet-300 dark:hover:bg-violet-600 hover:scale-105"
-            >
-              Home
-            </Link>
-            <Link
-              to="/Timeline"
-              className="text-gray-900 dark:text-white text-lg font-semibold px-4 py-2 rounded-md transition duration-300 transform hover:bg-violet-300 dark:hover:bg-violet-600 hover:scale-105"
-            >
-              Timeline
-            </Link>
-            <Link
-              to="/portfolio"
-              className="text-gray-900 dark:text-white text-lg font-semibold px-4 py-2 rounded-md transition duration-300 transform hover:bg-violet-300 dark:hover:bg-violet-600 hover:scale-105"
-            >
-              Portfolio
-            </Link>
-            <Link
-              to="/contact"
-              className="text-gray-900 dark:text-white text-lg font-semibold px-4 py-2 rounded-md transition duration-300 transform hover:bg-violet-300 dark:hover:bg-violet-600 hover:scale-105"
-            >
-              Contact
-            </Link>
-            <Link
-              to="/stats"
-              className="text-gray-900 dark:text-white text-lg font-semibold px-4 py-2 rounded-md transition duration-300 transform hover:bg-violet-300 dark:hover:bg-violet-600 hover:scale-105"
-            >
-              Statistics
-            </Link>
-            <Link
-              to="/offers"
-              className="text-gray-900 dark:text-white text-lg font-semibold px-4 py-2 rounded-md transition duration-300 transform hover:bg-violet-300 dark:hover:bg-violet-600 hover:scale-105"
-            >
-              Immaculate Tech
-            </Link>
+            {[
+              { path: "/", label: "Home" },
+              { path: "/Timeline", label: "Timeline" },
+              { path: "/portfolio", label: "Portfolio" },
+              { path: "/contact", label: "Contact" },
+              { path: "/stats", label: "Statistics" },
+              { path: "/offers", label: "Immaculate Tech" },
+            ].map((item) => (
+              <Link
+                key={item.path}
+                to={item.path}
+                className={`${linkClasses} ${
+                  location.pathname === item.path ? activeLinkClasses : ""
+                }`}
+              >
+                {item.label}
+              </Link>
+            ))}
           </div>
 
-          {/* Mobile Menu Button (hidden on larger screens) */}
-          <div className="sm:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-900 dark:text-white focus:outline-none"
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="sm:hidden text-gray-900 dark:text-white focus:outline-none"
+          >
+            <motion.div
+              animate={isOpen ? "open" : "closed"}
+              className="w-6 h-6 flex flex-col justify-around"
             >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </button>
-          </div>
+              <span
+                className={`block h-0.5 w-6 bg-current transform transition-all duration-300 ${
+                  isOpen ? "rotate-45 translate-y-2.5" : ""
+                }`}
+              />
+              <span
+                className={`block h-0.5 w-6 bg-current transition-all duration-300 ${
+                  isOpen ? "opacity-0" : ""
+                }`}
+              />
+              <span
+                className={`block h-0.5 w-6 bg-current transform transition-all duration-300 ${
+                  isOpen ? "-rotate-45 -translate-y-2.5" : ""
+                }`}
+              />
+            </motion.div>
+          </button>
         </div>
       </div>
 
-      {/* Mobile Menu: Shown when isOpen is true (only on small screens) */}
-      {isOpen && (
-        <div className="sm:hidden bg-white dark:bg-gray-900 py-4 px-4 rounded-md shadow-lg">
-          <ul className="space-y-4">
-            <li>
+      <motion.div
+        initial={false}
+        animate={{ height: isOpen ? "auto" : 0, opacity: isOpen ? 1 : 0 }}
+        transition={{ duration: 0.3 }}
+        className={`sm:hidden overflow-hidden bg-white dark:bg-stone-900 shadow-lg`}
+      >
+        {isOpen && (
+          <div className="px-4 py-2">
+            {[
+              { path: "/", label: "Home" },
+              { path: "/Timeline", label: "Career" },
+              { path: "/offers", label: "Services at IHT" },
+              { path: "/portfolio", label: "Portfolio" },
+              { path: "/contact", label: "Contact" },
+              { path: "/stats", label: "Statistics" },
+            ].map((item) => (
               <Link
-                to="/"
-                className="block text-gray-900 dark:text-white text-lg font-semibold px-4 py-2 rounded-md transition duration-300 transform hover:bg-violet-300 dark:hover:bg-violet-600 hover:scale-105"
+                key={item.path}
+                to={item.path}
+                onClick={() => setIsOpen(false)}
+                className={`block py-2 text-gray-900 dark:text-white text-lg font-semibold transition duration-300 hover:text-violet-600 dark:hover:text-violet-400 ${
+                  location.pathname === item.path ? "text-violet-600 dark:text-violet-400" : ""
+                }`}
               >
-                Home
+                {item.label}
               </Link>
-            </li>
-            <li>
-              <Link
-                to="/Timeline"
-                className="block text-gray-900 dark:text-white text-lg font-semibold px-4 py-2 rounded-md transition duration-300 transform hover:bg-violet-300 dark:hover:bg-violet-600 hover:scale-105"
-              >
-                Career
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/offers"
-                className="block text-gray-900 dark:text-white text-lg font-semibold px-4 py-2 rounded-md transition duration-300 transform hover:bg-violet-300 dark:hover:bg-violet-600 hover:scale-105"
-              >
-                Services at IHT
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/portfolio"
-                className="block text-gray-900 dark:text-white text-lg font-semibold px-4 py-2 rounded-md transition duration-300 transform hover:bg-violet-300 dark:hover:bg-violet-600 hover:scale-105"
-              >
-                Portfolio
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/contact"
-                className="block text-gray-900 dark:text-white text-lg font-semibold px-4 py-2 rounded-md transition duration-300 transform hover:bg-violet-300 dark:hover:bg-violet-600 hover:scale-105"
-              >
-                Contact
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/stats"
-                className="block text-gray-900 dark:text-white text-lg font-semibold px-4 py-2 rounded-md transition duration-300 transform hover:bg-violet-300 dark:hover:bg-violet-600 hover:scale-105"
-              >
-                Statistics
-              </Link>
-            </li>
-          </ul>
-        </div>
-      )}
+            ))}
+          </div>
+        )}
+      </motion.div>
     </nav>
   );
 }
