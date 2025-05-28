@@ -1,5 +1,11 @@
 export default [
   {
+    title: "ParishFlow",
+    imgUrl: "assets/parishflow.png",
+    stack: ["React", "Chakra UI", "JavaScript"],
+    link: "https://parishflow.com/",
+  },
+  {
     title: "Immaculate Heart Tech",
     imgUrl: "assets/iht.png",
     stack: ["React", "Chakra UI", "JavaScript"],
